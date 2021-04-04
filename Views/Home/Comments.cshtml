@@ -1,0 +1,54 @@
+﻿@model List<BertoniTestNoriarmanMVC.Models.Comments>
+
+@{
+    ViewBag.Title = "Comments";
+}
+
+<div class="container">
+    <h2>Comments</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Post Id
+                    </th>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Body
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var a in Model)
+                {
+                    <tr>
+                        <td>
+                            @a.postId
+                        </td>
+                        <td>
+                            @a.id
+                        </td>
+                        <td>
+                            @a.name
+                        </td>
+                        <td>
+                            @a.email
+                        </td>
+                        <td>
+                            @a.body
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+</div>

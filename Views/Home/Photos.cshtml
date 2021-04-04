@@ -1,22 +1,28 @@
-﻿@model List<BertoniTestNoriarmanMVC.Models.Albums>
+﻿@model List<BertoniTestNoriarmanMVC.Models.Photos>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Photos";
 }
 
 <div class="container">
-    <h2>Albums</h2>
+    <h2>Photos</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>
-                        User Id
-                    </th>
-                    <th>
                         Album Id
                     </th>
                     <th>
-                        Title
+                        Photo Id
+                    </th>
+                    <th>
+                        Photo Title
+                    </th>
+                    <th>
+                        Photo Url
+                    </th>
+                    <th>
+                        Thumbnail Url
                     </th>
                 </tr>
 
@@ -26,7 +32,7 @@
                 {
                 <tr>
                     <td>
-                        @a.userId
+                        @a.albumId
                     </td>
                     <td>
                         @a.id
@@ -35,7 +41,13 @@
                         @a.title
                     </td>
                     <td>
-                        @Html.ActionLink("View Album", "Photos", new { id = @a.id })
+                        @a.url
+                    </td>
+                    <td>
+                        @a.thumbnailUrl
+                    </td>
+                    <td>
+                        @Html.ActionLink("View Comments", "Comments", new { id = @a.id })
                     </td>
                 </tr>
                 }

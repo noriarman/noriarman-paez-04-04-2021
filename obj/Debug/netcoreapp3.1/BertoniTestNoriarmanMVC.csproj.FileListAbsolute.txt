@@ -36,3 +36,5 @@ C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\Be
 C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\BertoniTestNoriarmanMVC.dll
 C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\BertoniTestNoriarmanMVC.pdb
 C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\BertoniTestNoriarmanMVC.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Comments.cshtml.g.cs
+C:\Users\Usuario\source\repos\BertoniTestNoriarmanMVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Photos.cshtml.g.cs

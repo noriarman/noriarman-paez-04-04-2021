@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BertoniTestNoriarmanMVC.Util;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace BertoniTestNoriarmanMVC.Controllers
 {
@@ -23,9 +24,25 @@ namespace BertoniTestNoriarmanMVC.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var url = "https://s3.amazonaws.com/dolartoday/data.json";
+            var url = "https://jsonplaceholder.typicode.com/albums";
             var response = await _restUtil.GetAsync(url).ConfigureAwait(false);
-            var data = JsonConvert.DeserializeObject<DolarToday>(response.Content);
+            List<Albums> data = JsonConvert.DeserializeObject<List<Albums>>(response.Content);
+            return View(data);
+        }
+
+        public async Task<IActionResult> Photos(int? id)
+        {
+            var url = $"https://jsonplaceholder.typicode.com/photos?albumId={id}";
+            var response = await _restUtil.GetAsync(url).ConfigureAwait(false);
+            List<Photos> data = JsonConvert.DeserializeObject<List<Photos>>(response.Content);
+            return View(data);
+        }
+
+        public async Task<IActionResult> Comments(int? id)
+        {
+            var url = $"https://jsonplaceholder.typicode.com/comments?postId={id}";
+            var response = await _restUtil.GetAsync(url).ConfigureAwait(false);
+            List<Comments> data = JsonConvert.DeserializeObject<List<Comments>>(response.Content);
             return View(data);
         }
 
